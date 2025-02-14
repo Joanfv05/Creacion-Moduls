@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cicle_formatiu_admin,cicle.formatiu.admin,model_cicle_formatiu,,1,1,1,1
+access_modul_admin,modul.admin,model_modul,,1,1,1,1
+access_alumne_admin,alumne.admin,model_alumne,,1,1,1,1
+access_professor_admin,professor.admin,model_professor,,1,1,1,1
+

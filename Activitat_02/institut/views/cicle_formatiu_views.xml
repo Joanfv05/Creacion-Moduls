@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="cicle_formatiu_action" model="ir.actions.act_window">
+        <field name="name">Ciclos formativos</field>
+        <field name="res_model">cicle.formatiu</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Acción para Módulos -->
+    <record id="modul_action" model="ir.actions.act_window">
+        <field name="name">Módulos</field>
+        <field name="res_model">modul</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Acción para Alumnos -->
+    <record id="alumne_action" model="ir.actions.act_window">
+        <field name="name">Alumnos</field>
+        <field name="res_model">alumne</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Acción para Profesores -->
+    <record id="professor_action" model="ir.actions.act_window">
+        <field name="name">Profesores</field>
+        <field name="res_model">professor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Definición de Menús -->
+    <!-- Menú Principal -->
+    <menuitem name="Instituto" id="instituto_base_menu" sequence="1"/>
+
+    <!-- Submenús -->
+    <menuitem name="Ciclos" id="cicle_formatiu_menu" parent="instituto_base_menu" action="cicle_formatiu_action" sequence="2"/>
+    <menuitem name="Módulos" id="modul_menu" parent="instituto_base_menu" action="modul_action" sequence="3"/>
+    <menuitem name="Alumnos" id="alumne_menu" parent="instituto_base_menu" action="alumne_action" sequence="4"/>
+    <menuitem name="Profesores" id="professor_menu" parent="instituto_base_menu" action="professor_action" sequence="5"/>
+    
+    <!-- Vistas del modelo CicleFormatiu -->
+    <record id="cicle_formatiu_view_tree" model="ir.ui.view">
+        <field name="name">cicle.formatiu.tree</field>
+        <field name="model">cicle.formatiu</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="cicle_formatiu_view_form" model="ir.ui.view">
+        <field name="name">cicle.formatiu.form</field>
+        <field name="model">cicle.formatiu</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                    <group>
+                        <field name="module_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
