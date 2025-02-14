@@ -1,0 +1,29 @@
+<odoo>
+    <record id="view_form_doctor" model="ir.ui.view">
+        <field name="name">hospital.doctor.form</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <form string="Metge">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="registration_number"/>
+                        <field name="license_number"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_doctor" model="ir.ui.view">
+        <field name="name">hospital.doctor.tree</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <tree string="Metges">
+                <field name="name"/>
+                <field name="license_number"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
+

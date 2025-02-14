@@ -1,0 +1,41 @@
+<odoo>
+    <record id='biblioteca_socio_action' model='ir.actions.act_window'>
+        <field name="name">Socios</field>
+        <field name="res_model">biblioteca.socio</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="biblioteca_socio_action" model="ir.actions.act_window">
+    	<field name="name">Socios</field>
+    	<field name="res_model">biblioteca.socio</field>
+    	<field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="biblioteca_socio_view_tree" model="ir.ui.view">
+        <field name="name">biblioteca.socio.tree</field>
+        <field name="model">biblioteca.socio</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="surname"/>
+                <field name="identifier"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="biblioteca_socio_view_form" model="ir.ui.view">
+        <field name="name">biblioteca.socio.form</field>
+        <field name="model">biblioteca.socio</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="surname"/>
+                        <field name="identifier"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
